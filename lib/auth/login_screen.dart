@@ -65,8 +65,10 @@ class _LoginScreenState extends State<LoginScreen> {
               margin: EdgeInsets.only(left: 10, right: 10, top: 20),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (builder) => MainScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (builder) => MobileScreenLayout()));
                 },
                 child: Text("Login"),
                 style: ElevatedButton.styleFrom(
