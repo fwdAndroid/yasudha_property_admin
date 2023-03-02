@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:yasudha_property_admin/agentlist/agentlist.dart';
 import 'package:yasudha_property_admin/customer/customer_list.dart';
+import 'package:yasudha_property_admin/plot/plot_management.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});
@@ -75,6 +76,10 @@ class _Home_ScreenState extends State<Home_Screen> {
           ),
           Card(
             child: ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => PlotManagement()));
+              },
               leading: Icon(
                 Icons.area_chart,
                 color: Color(0xfff234F68),
