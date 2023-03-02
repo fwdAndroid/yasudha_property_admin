@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:yasudha_property_admin/agentlist/agentlist.dart';
 import 'package:yasudha_property_admin/customer/customer_list.dart';
 import 'package:yasudha_property_admin/plot/plot_management.dart';
+import 'package:yasudha_property_admin/project_mangment/projectmangement.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});
@@ -89,7 +90,25 @@ class _Home_ScreenState extends State<Home_Screen> {
                 style: TextStyle(color: Colors.black),
               ),
             ),
-          )
+          ),
+          Card(
+            child: ListTile(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (builder) => ProjectManagement()));
+              },
+              leading: Icon(
+                Icons.production_quantity_limits,
+                color: Color(0xfff234F68),
+              ),
+              title: Text(
+                "Project Management",
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
+          ),
         ],
       ),
     );
